@@ -7,7 +7,7 @@ import { JobsContent } from "@/components/jobs/jobs-content";
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       <Header />
       <div className="flex">
         <CompanySidebar />

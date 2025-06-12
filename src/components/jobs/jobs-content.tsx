@@ -59,6 +59,14 @@ export function JobsContent() {
 
   return (
     <div className="p-6">
+      {/* Hero Quote Section */}
+      <div className="bg-black rounded-lg p-6 text-white text-center mb-6">
+        <p className="text-lg italic">
+          "Simplicity is the ultimate sophistication."
+        </p>
+        <p className="text-sm mt-2 opacity-75">- Steve Jobs</p>
+      </div>
+
       {/* Main Navigation Tabs */}
       <div className="mb-6">
         <nav className="flex space-x-8 border-b border-gray-200">

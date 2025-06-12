@@ -18,16 +18,16 @@ export function Header() {
         {/* Search */}
         <div className="flex-1 max-w-md mx-8">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <Input
               placeholder="Search for people or company"
-              className="pl-10 bg-gray-50 border-gray-200 h-10"
+              className="pr-10 bg-gray-50 border-gray-200 h-10 rounded-full"
             />
+            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
           </div>
         </div>
 
         {/* Navigation Icons & Button */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
           <Button variant="ghost" size="icon" className="w-10 h-10">
             <Home className="w-5 h-5" />
           </Button>
@@ -42,7 +42,7 @@ export function Header() {
           </Button>
 
           {/* Create a Job Button */}
-          <Button className="bg-[#a3e635] hover:bg-[#84cc16] text-black font-medium px-4 py-2 h-10">
+          <Button className="bg-[#a3e635] hover:bg-[#84cc16] text-black font-medium px-4 py-2 h-10 rounded-full ml-2">
             + Create a Job
           </Button>
         </div>

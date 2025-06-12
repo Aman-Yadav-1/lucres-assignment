@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Acme Corp - Recruitment Platform",
+  title: "Recruitment Platform",
   description: "Modern recruitment and hiring platform",
 };
 

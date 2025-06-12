@@ -1,9 +1,7 @@
 "use client";
 
-import { Calendar, ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Lock, ArrowUpRight } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 
 export function InterviewsSidebar() {
   const interviews = [
@@ -26,11 +24,11 @@ export function InterviewsSidebar() {
   ];
 
   return (
-    <div className="w-80 bg-white border-l border-gray-200 p-6">
+    <div className="w-80 bg-white border-l border-gray-200 p-6 min-h-screen">
       {/* Reveals Left */}
-      <div className="mb-6">
+      <div className="mb-6 p-3 border border-green-500 rounded-md">
         <div className="flex items-center space-x-2 mb-2">
-          <Calendar className="w-4 h-4 text-gray-400" />
+          <Lock className="w-4 h-4 text-green-500" />
           <span className="text-sm font-medium text-gray-900">
             5/5 Reveals Left
           </span>
@@ -39,16 +37,22 @@ export function InterviewsSidebar() {
       </div>
 
       {/* Scheduled Interviews */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-4">
+      <div className="mb-6 p-3 border border-gray-200 rounded-sm">
+        <div className="flex items-center justify-between mb-2">
           <h3 className="font-semibold text-gray-900">Scheduled Interviews</h3>
           <ArrowUpRight className="w-4 h-4 text-gray-400" />
         </div>
 
-        <div className="space-y-4">
+        {/* Line below scheduled text */}
+        <div className="border-b border-gray-200 mb-4"></div>
+
+        <div className="space-y-3">
           {interviews.map((interview) => (
-            <div key={interview.id} className="flex items-center space-x-3">
-              <Avatar className="w-8 h-8">
+            <div
+              key={interview.id}
+              className="flex items-center space-x-3 py-1"
+            >
+              <Avatar className="w-6 h-6">
                 <AvatarImage src={interview.avatar} />
                 <AvatarFallback>
                   {interview.name
@@ -68,14 +72,6 @@ export function InterviewsSidebar() {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Edit Profile Button */}
-      <div className="space-y-3">
-        <Button variant="outline" className="w-full justify-start">
-          <Calendar className="w-4 h-4 mr-2" />
-          Edit Profile
-        </Button>
       </div>
     </div>
   );
