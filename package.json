@@ -1,5 +1,5 @@
 {
-  "name": "fusion-starter",
+  "name": "lucres-assignment",
   "private": true,
   "scripts": {
     "dev": "next dev",
